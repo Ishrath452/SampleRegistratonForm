@@ -32,6 +32,12 @@ cellspacing="2">
 size="30"></td>
 </tr>
 <tr>
+<tr>
+<td>Mother Name</td>
+<td><input type="text" name="mothername" id="mothername"
+size="30"></td>
+</tr>
+<tr>
 <td>Postal Address</td>
 <td><input type="text" name="paddress" id="paddress" size="30"></td>
 </tr>
