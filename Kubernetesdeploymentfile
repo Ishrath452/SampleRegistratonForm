@@ -1,0 +1,15 @@
+export NODE_SIZE=${NODE_SIZE:-t2.micro}
+export MASTER_SIZE=${MASTER_SIZE:-t2.micro}
+export ZONES=${ZONES:-"us-east-1d,us-east-1b,us-east-1c"}
+export KOPS_STATE_STORE="kubernetes.test.cluster.01"
+kops create cluster kubernetes.test.cluster.01 \
+--node-count 3 \
+--master-count 3 \
+--zones $ZONES \
+--node-size $NODE_SIZE \
+--master-size $MASTER_SIZE \
+--master-zones $ZONES \
+--dns private \
+--dns-zone kubernetes.test.cluster.01 \
+--cloud aws
+--yes
